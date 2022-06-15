@@ -1,2 +1,2 @@
-# javascript-assignment-2
+# javascript-assignments
 my java-script assignments
