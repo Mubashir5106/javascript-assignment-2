@@ -1,0 +1,14 @@
+body{
+       background-color: #fffff;
+      
+}
+
+.on{
+   
+    margin-left: 35%;
+    margin-bottom: 35%;
+    margin-top: 10%;
+    height: auto;
+    width: 500px;
+    justify-content: center;  
+}
