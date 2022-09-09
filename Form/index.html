@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mubashir Form</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
+</head>
+<body>
+    <center>
+    <img class="main_image" src="images/mainlogo.png" alt="">
+    
+    <form action="" id="form">
+
+      <label for="City" class="label_city">Select City : <br>
+        <select id="city" >
+          <option value="City">Select City</option>
+          <option value="karachi">karachi</option>
+          <option value="peshawar">peshawar</option>
+          <option value="lahore">lahore</option>
+          <option value="Faisalabad">Faisalabad</option>
+          <option value="islamabad">islamabad</option>
+        </select>
+      </label>    
+
+      <label for="Course">Select Course : <br>
+        <select id="course">
+            <option value="course">Select Course</option>
+            <option value="web development">Web Development</option>
+            <option value="Amazon">Digital Marketting</option>
+        
+        </select></label><br>  
+      <label for="Name">Full Name : <br>
+        <input type="text"  id="name" placeholder="Full Name" maxlength="150" size="24" required>
+      </label>
+      <label for="Name">Father Name : <br>
+        <input type="text"  id="fname" placeholder="Father Name" maxlength="150" size="24" required>
+      </label>
+      <br>
+      <label for="Email" >Email Address : <br>
+        <input type="email" id="email" placeholder="Email" maxlength="200" size="24" required>
+      </label>    
+      <label for="number" >Phone : <br>
+        <input type="number" placeholder="Phone" id="phone" maxlength="11" size="24" required>
+      </label> <br>
+      <label for="CNIC">CNIC : <br>
+        <input name="student_cnic" id="st_cnic" class="ant-input theme_input_ltr error_input" type="text" placeholder="CNIC" value="" size="24">
+      </label>
+      <label for="CNIC">CNIC : <br>
+        <input name="father_cnic" id="f_cnic" class="ant-input theme_input_ltr error_input" type="text" placeholder="Father CNIC (optional)" size="24" >
+      </label><br>
+      <label for="date" >Date of Birth : <br>
+        <input type="date" id="date" placeholder="email" maxlength="200" size="24" required>
+      </label>  
+      <label for="gender">Select Gender : <br>
+        <select id="gender">
+            <option value="gender">Select gender</option>
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        
+        </select></label><br>  
+        <label for="Address">Address : <br>
+          <input name="full_address" id="address" class="ant-input theme_input_ltr error_input" type="text" size="60" placeholder="Address" value="">
+        </label><br>
+
+        <label for="qualification">Last Qualification : <br>
+          <select id="qualification">
+              <option value="Last Qualification">Last Qualification</option>
+              <option value="web development">Grade 5-8</option>
+              <option value="Matric">Matric</option>
+              <option value="intermidiate">Intermidiate</option>
+              <option value="ungraduate">UnGraduate</option>
+              <option value="graduate">Graduate</option>
+              <option value="master">Master</option>
+              <option value="phd">PHD</option>
+          
+          </select></label><br>  
+<br><br><br>
+          <p>Upload Picture: <br>
+            <input type="file" id="file"></p>
+            <span>With white or blue background
+              File size must be less than 1MB
+              File type: jpg, jpeg, png
+              Upload your recent passport size picture
+              Your Face should be clearly visible without any Glasses</span>
+        <br><br><br>
+      
+    
+    <ol>
+      <li>I hereby, solemnly declare that the data and facts mentioned herein are true and correct to the best of my knowledge. Further, I will abide by all the established and future regulations and policies of SWIT</li>
+      <li>I hereby accept the responsibilities of good conduct and guarantee that I will not be involved in any other activity, political or ethical, but learning during my stay in the program.</li>
+      <li>Defiance will render my admission canceled at any point in time.      </li>
+      <li>Upon completion, of the course, I will complete the required project by SWIT.</li>
+    </ol>
+  
+    
+      <button type="submit" id="sav_button" onclick="savedata()">SUBMIT</button>
+      <button id="btn2" onclick="admin()">Admin</button>
+      <input type="text" name="" id="adminpass" placeholder="Enter Password Here..Password Is password">
+  <button id="btn"onclick="check()">Sumbit</button>
+</form>
+</center> 
+
+
+
+<script src="app.js"></script>
+  </body>
+</html>

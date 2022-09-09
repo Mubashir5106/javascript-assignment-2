@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style1.css">
+</head>
+<body>
+    <center>
+        <table id="table">
+            <tr>
+                <td class="td">
+                    City
+                </td>
+                <td class="td">
+                    Course
+                </td>
+                <td class="td">
+                    Full Name
+                </td>
+                <td class="td">
+                    Father Name
+                </td>
+                <td class="td">
+                    Email
+                </td>
+                <td class="td">
+                    Phone
+                </td>
+                <td class="td">
+                    Student Cnic
+                </td>
+                <td class="td">
+                    Father Cnic
+                </td>
+                <td class="td">
+                    Date
+                </td>
+                <td class="td">
+                    Gender
+                </td>
+                <td class="td">
+                    Address
+                </td>
+                <td class="td">
+                    Qualification
+                </td>
+                <td class="td">
+                    File
+                </td>
+            </tr>
+        </table>
+    </center>
+    <script>
+        function abc() {
+            var getdata = JSON.parse(localStorage.getItem("data"))
+            for (var key in getdata)
+                document.getElementById("table").children[0].innerHTML +=
+                    ` <tr>
+                <td class="td">
+                   ${getdata[key].city}
+                </td>
+                <td class="td">
+                   ${getdata[key].course}
+                </td>
+                        
+                <td class="td">
+                   ${getdata[key].name}
+                </td>
+                <td class="td">
+                    ${getdata[key].fname}
+                </td>
+                <td class="td">
+                    ${getdata[key].email}
+                </td>
+                <td class="td">
+                    ${getdata[key].phone}
+                </td>
+                <td class="td">
+                    ${getdata[key].st_cnic}
+                </td>
+                <td class="td">
+                   ${getdata[key].f_cnic}
+                </td>
+                <td class="td">
+                   ${getdata[key].date}
+                </td>
+                <td class="td">
+                   ${getdata[key].gender}
+                </td>
+                <td class="td">
+                   ${getdata[key].address}
+                </td>
+                <td class="td">
+                   ${getdata[key].qualification}
+                </td>
+                <td class="td">
+                   ${getdata[key].file}
+                </td>
+                <td class="td">
+                  <button id="btndel" onclick="dlt()">Delete</button>
+                </td>
+            </tr>`
+        }
+        abc()
+    </script>
+
+    <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,66 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+#form{
+   color: #0d6db7;
+   
+}
+
+.label_city{
+    border-width: 180px;
+    width: 180px;
+    
+  }
+  select{
+    border: none;
+  }
+
+label {
+    border-color: lawngreen;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px;
+    margin: 15px 20px 15px 20px;
+    padding: 2px 2px 2px 2px;
+    
+}
+
+input{
+    border: #0d6db7;
+}
+
+#sav_button{
+    width: 50%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #0d6db7;
+    color: #fff;
+    
+}
+
+
+
+#btn2{
+    width: 20%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #0d6db7;
+    color: #fff;
+    
+
+}
+
+#btn {
+    width: 15%;
+    height: 35px;
+    border-radius: 10px;
+    background-color: #0d6db7;
+    color: #fff;
+    display: none;
+}
+#adminpass {
+    margin-top: 25px;
+    text-align: center;
+    display: none;
+}
