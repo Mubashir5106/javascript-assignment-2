@@ -3,18 +3,18 @@ const loginForm = document.querySelector("form.login");
 const loginBtn = document.querySelector("label.login");
 const signupBtn = document.querySelector("label.signup");
 const signupLink = document.querySelector("form .signup-link a");
-// signupBtn.onclick = (()=>{
-//   loginForm.style.marginLeft = "-50%";
-//   loginText.style.marginLeft = "-50%";
-// });
-// loginBtn.onclick = (()=>{
-//   loginForm.style.marginLeft = "0%";
-//   loginText.style.marginLeft = "0%";
-// });
-// signupLink.onclick = (()=>{
-//   signupBtn.click();
-//   return false;
-// });
+signupBtn.onclick = (()=>{
+  loginForm.style.marginLeft = "-50%";
+  loginText.style.marginLeft = "-50%";
+});
+loginBtn.onclick = (()=>{
+  loginForm.style.marginLeft = "0%";
+  loginText.style.marginLeft = "0%";
+});
+signupLink.onclick = (()=>{
+  signupBtn.click();
+  return false;
+});
 
 
 
@@ -62,7 +62,6 @@ if (register_btn) {
     let number = document.getElementById("number")
     let email = document.getElementById("email");
     let password = document.getElementById("password");
-    let file = document.getElementById("file");
 
     createUserWithEmailAndPassword(auth, email.value, password.value)
       .then((userCredential) => {
@@ -74,7 +73,6 @@ if (register_btn) {
           number: number.value,
           email: email.value,
           password: password.value,
-          file: file,
         })
 
       })
@@ -112,9 +110,13 @@ if (loginBtn) {
               alert("login !")
               setTimeout(()=>{
                 window.location = "userprofile.html"
+                document.write("<h2> Current Profile :<h2/> <br>")
+                document.write("User Name : " + snapshot.val().name + "<br>");
+                document.write("Email Address : " + snapshot.val().email + "<br>");
+                document.write("Phone Number : " + snapshot.val().number + "<br>");
                   
               },2000)
-              profile.innerHTML = `<h2> ${snapshot.val().name}${snapshot.val().email}/h2> `
+              profile.innerHTML = `<h2>${snapshot.val().name}${snapshot.val().email}/h2> `
             } else {
               console.log("No data available");
             }
@@ -131,4 +133,60 @@ if (loginBtn) {
 
   })
 }
+
+
+
+
+// const newName = document.getElementById("newName"),
+// name = document.getElementById("Name");
+// number = document.getElementById("number");
+// email = document.getElementById("email");
+// password = document.getElementById("password");
+// file = document.getElementById("file");
+// register_btn = document.getElementById("register_btn");
+//   signout = document.getElementById("signout"),
+// name = document.getElementById("login_name");
+// email = document.getElementById("login_email");
+// password = document.getElementById("login_password");
+// let createAccount = () => {
+//   createUserWithEmailAndPassword(auth, email.value, password.value)
+//     .then(async (userCredential) => {
+//       const user = userCredential.user;
+//       console.log(userCredential);
+//       console.log(user.uid);
+//       await setDoc(doc(db, "users", user.uid), {
+//         name: name.value,
+//         // number: number.value,
+//         email: email.value,
+//         password: password.value,
+//         // file: file,
+//         uid: user.uid,
+//       });
+//       window.location = "userprofile.html";
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       // ..
+//     });
+// };
+
+// signup.addEventListener("click", createAccount);
+// let loginAccount = () => {
+//   signInWithEmailAndPassword(auth, email.value, password.value)
+//     .then((userCredential) => {
+//       const user = userCredential.user;
+//       console.log(userCredential);
+//       console.log(user.uid);
+//       window.location = "userprofile.html";
+
+//     })
+//     .catch((error) => {
+//       const errorCode = error.code;
+//       const errorMessage = error.message;
+//       // ..
+//     });
+// };
+
+// login_btn.addEventListener("click", loginAccount);
 
